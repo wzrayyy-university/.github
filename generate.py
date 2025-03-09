@@ -5,11 +5,11 @@ with open('index.yml') as f:
 
 output = ''
 
-output += f"# {data['meta']['name']}\n\n"
+output += f"# {data['meta']['name']}\n"
 if 'note' in data['meta']:
-    output += f"> [!NOTE]\n> {data['meta']['note']}\n\n"
+    output += f"> [!NOTE]\n> {data['meta']['note']}\n"
 
-for entry_name in data['assignments']:
+for entry_name in sorted(data['assignments']):
     repo_prefix = f'https://github.com/wzrayyy-university/{entry_name}-'
 
     entry = data['assignments'][entry_name]
@@ -18,21 +18,22 @@ for entry_name in data['assignments']:
     output += f"## {entry['name']}\n"
     numbered = bool(entry.get('numbered') != False)
 
-    if 'extras' in entry:
-        output += '\n'
-        extras = entry['extras']
-        if type(extras) is list:
-            output += '\n'.join(extras)
-            output += '\n\n'
-        else:
-            output += entry['extras'] + '\n\n'
+    if 'description' in entry:
+        output += f"{entry['description']}  \n\n"
 
-    idx = 1
+    if 'links' in entry:
+        links = entry['links']
+        if type(links) is list:
+            output += ', '.join([f"[{link['name']}]({link['url']})" for link in links])
+        else:
+            output += entry['links']
+        output += '\n'
 
     show_semester = len(projects) > 1 and sum([len(projects[i]) for i in projects]) > len(projects)
+    idx = 1
 
     for project_semester in projects:
-        output += f'\n#### Semester {project_semester}\n' if show_semester else ''
+        output += f'### Semester {project_semester}\n' if show_semester else ''
         for project in projects[project_semester]:
             if type(project) is str:
                 name = project
@@ -48,7 +49,6 @@ for entry_name in data['assignments']:
                 idx += 1
             else:
                 output += f'* [{name}]({repo})\n'
-    output += '\n'
 
 
 with open("profile/README.md", 'w') as f:

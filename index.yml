@@ -1,8 +1,9 @@
 assignments:
   ca:
     name: CompArch
-    extras:
-      - '[Useful utils](https://github.com/wzrayyy-university/ca-tools)'
+    links:
+      - name: Useful utils
+        url: https://github.com/wzrayyy-university/ca-tools
     projects:
       2:
         - Fixed Point
