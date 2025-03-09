@@ -3,18 +3,16 @@ import yaml
 with open('index.yml') as f:
     data = yaml.safe_load(f)
 
-output = """
-# University index
+output = ''
 
-> [!NOTE]
-> All repositories will remain private until the end of the exam session.
+output += f"# {data['meta']['name']}\n\n"
+if 'note' in data['meta']:
+    output += f"> [!NOTE]\n> {data['meta']['note']}\n\n"
 
-"""
-
-for entry_name in data['repos']:
+for entry_name in data['assignments']:
     repo_prefix = f'https://github.com/wzrayyy-university/{entry_name}-'
 
-    entry = data['repos'][entry_name]
+    entry = data['assignments'][entry_name]
     projects = entry['projects']
 
     output += f"## {entry['name']}\n"

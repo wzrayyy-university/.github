@@ -1,7 +1,7 @@
 # University index
 
 > [!NOTE]
-> All repositories will remain private until the end of the exam session.
+> All assignment repositories will stay private until the end of their respective semesters
 
 ## CompArch
 

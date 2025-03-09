@@ -1,4 +1,4 @@
-repos:
+assignments:
   ca:
     name: CompArch
     extras:
@@ -34,3 +34,7 @@ repos:
 availability:
   1: 04/01/2024
   2: 11/01/2025
+
+meta:
+  name: University index
+  note: All assignment repositories will stay private until the end of their respective semesters

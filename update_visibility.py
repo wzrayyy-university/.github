@@ -33,8 +33,8 @@ if datetime.now() < datetime.strptime(data['availability'][current_sem], "%m/%d/
 HEADERS = {'Authorization': f'Bearer {sys.argv[1]}'}
 
 status = False
-for entry_name in data['repos']:
-    entry = data['repos'][entry_name]
+for entry_name in data['assignments']:
+    entry = data['assignments'][entry_name]
 
     projects = entry['projects'].get(current_sem) or []
 
