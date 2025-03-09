@@ -1,0 +1,28 @@
+ca:
+  name: CompArch
+  extras:
+    - '[Useful utils](https://github.com/wzrayyy-university/ca-tools)'
+  hidden:
+    - Fixed Point
+    - Floating Point
+
+cpp:
+  name: C++
+  projects:
+    - Labwork 1
+    - Labwork 2
+    - Labwork 3
+    - Labwork 4
+    - Labwork 5
+  hidden:
+    - Way Home
+
+dsa:
+  name: DSA
+  numbered: false
+  projects:
+    - name: 1 semester
+      repo: '1'
+  hidden:
+    - name: 2 semester
+      repo: '2'
