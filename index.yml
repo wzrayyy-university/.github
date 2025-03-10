@@ -1,9 +1,13 @@
+meta:
+  name: University index
+  note: All assignment repositories will stay private until the end of their respective semesters
+
 assignments:
   ca:
     name: CompArch
     links:
       - name: Useful utils
-        url: https://github.com/wzrayyy-university/ca-tools
+        repo: tools
     projects:
       2:
         - Fixed Point
@@ -24,10 +28,13 @@ assignments:
   dsa:
     name: DSA
     numbered: false
+    links:
+      - Assignments
     projects:
       1:
         - name: 1 semester
           repo: '1'
+          idx: 129
       2:
         - name: 2 semester
           repo: '2'
@@ -36,6 +43,4 @@ availability:
   1: 04/01/2024
   2: 11/01/2025
 
-meta:
-  name: University index
-  note: All assignment repositories will stay private until the end of their respective semesters
+# yaml-language-server: $schema=schema.json

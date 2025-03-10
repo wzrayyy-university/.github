@@ -15,5 +15,6 @@
 ### Semester 2
 6. [Way Home](https://github.com/wzrayyy-university/cpp-way-home)
 ## DSA
+[Assignments](https://github.com/wzrayyy-university/dsa-assignments)
 * [1 semester](https://github.com/wzrayyy-university/dsa-1)
 * [2 semester](https://github.com/wzrayyy-university/dsa-2)

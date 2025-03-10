@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "title": "Schema for index.yml",
+  "type": "object",
+  "properties": {
+    "assignments": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+        ".*": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Property name is used as repo prefix + '-'.",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Display name"
+            },
+            "numbered": {
+              "type": "boolean",
+              "description": "Number the projects"
+            },
+            "show_semesters": {
+              "type": "boolean",
+              "description": "Force show or hide semsters"
+            },
+            "links": {
+              "type": "array",
+              "minItems": 1,
+              "description": "Extra links",
+              "items": {
+                "type": [
+                  "object",
+                  "string"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "repo": {
+                    "type": "string"
+                  }
+                },
+                "anyOf": [
+                  {
+                    "oneOf": [
+                      {
+                        "properties": {
+                          "url": {
+                            "type": "null",
+                            "errorMessage": "Only one of \"repo\" or \"url\" is allowed."
+                          },
+                          "repo": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "repo"
+                        ]
+                      },
+                      {
+                        "properties": {
+                          "url": {
+                            "type": "string"
+                          },
+                          "repo": {
+                            "type": "null",
+                            "errorMessage": "Only one of \"repo\" or \"url\" is allowed."
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "url"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "description": {
+              "type": "string",
+              "description": "Optional description"
+            },
+            "projects": {
+              "type": "object",
+              "additionalProperties": false,
+              "minProperties": 1,
+              "patternProperties": {
+                "[0-9]+": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": [
+                      "object",
+                      "string"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "repo": {
+                        "type": "string"
+                      },
+                      "idx": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "repo"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": [
+            "name",
+            "projects"
+          ]
+        }
+      }
+    },
+    "availability": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "description": "Date. Format: %m/%d/%Y",
+      "patternProperties": {
+        "[0-9]+": {
+          "type": "string",
+          "pattern": "^(0[1-9]|1[0-2])\/(0[1-9]|(1|2)[0-9]|3[0-1])\/(20[0-9]{2})$"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Title of the README.md file"
+        },
+        "note": {
+          "type": "string",
+          "title": "Additional data displayed as `[!NOTE]`"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "highlights": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "repo": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "repo"
+        ]
+      }
+    }
+  },
+  "required": [
+    "assignments",
+    "availability",
+    "meta"
+  ]
+}
