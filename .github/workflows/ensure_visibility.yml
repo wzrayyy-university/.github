@@ -1,4 +1,4 @@
-name: Update visibility
+name: Ensure visibility
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  update_visibility:
+  ensure_visibility:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -25,12 +25,12 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Update visibility
-        id: update_visibility
-        run: python3 update_visibility.py "${{ secrets.ACCESS_TOKEN }}"
+        id: ensure_visibility
+        run: python3 ensure_visibility.py "${{ secrets.ACCESS_TOKEN }}"
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
-        if: ${{ steps.update_visibility.outputs.updated == '1' }}
+        if: ${{ steps.ensure_visibility.outputs.updated == '1' }}
         with:
           default_author: github_actions
           add: metadata.json
