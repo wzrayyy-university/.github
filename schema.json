@@ -41,6 +41,9 @@
                   "url": {
                     "type": "string"
                   },
+                  "visibility": {
+                    "type": "integer"
+                  },
                   "repo": {
                     "type": "string"
                   }

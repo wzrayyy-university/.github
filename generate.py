@@ -3,6 +3,9 @@ import yaml
 with open('index.yml') as f:
     data = yaml.safe_load(f)
 
+with open('metadata.json') as f:
+    current_semester = yaml.safe_load(f)['last_available'] + 1
+
 output = f"# {data['meta']['name']}\n"
 if 'note' in data['meta']:
     output += f"> [!NOTE]\n> {data['meta']['note']}\n"
@@ -35,6 +38,9 @@ for entry_name in sorted(data['assignments']):
                 name = link
                 url = repo_prefix + link.lower().replace(' ', '-')
             else:
+                if 'visibility' in link and link['visibility'] >= current_semester:
+                    continue
+
                 name = link['name']
                 if 'repo' in link:
                     url = repo_prefix + link['repo']

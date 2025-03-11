@@ -8,6 +8,9 @@ assignments:
     links:
       - name: Useful utils
         repo: tools
+      - name: Assignments
+        repo: assignments
+        visibility: 2
     projects:
       2:
         - Fixed Point
