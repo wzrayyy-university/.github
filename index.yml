@@ -1,6 +1,7 @@
 meta:
   name: University index
   note: All assignment repositories will stay private until the end of their respective semesters
+  repo: wzrayyy-university
 
 assignments:
   ca:
@@ -32,9 +33,11 @@ assignments:
     name: DSA
     numbered: false
     links:
-      - Assignments
       - name: Sort Me CLI
         repo: cli
+      - name: Assignments
+        repo: assignments
+        visibility: 2
     projects:
       1:
         - name: 1 semester

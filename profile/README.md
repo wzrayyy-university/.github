@@ -2,7 +2,7 @@
 > [!NOTE]
 > All assignment repositories will stay private until the end of their respective semesters
 ## CompArch
-[Useful utils](https://github.com/wzrayyy-university/ca-tools)
+[Useful utils](https://github.com/wzrayyy-university/ca-tools), [Assignments](https://github.com/wzrayyy-university/ca-assignments)
 1. [Fixed Point](https://github.com/wzrayyy-university/ca-fixed-point)
 2. [Floating Point](https://github.com/wzrayyy-university/ca-floating-point)
 ## C++
@@ -15,6 +15,6 @@
 ### Semester 2
 6. [Way Home](https://github.com/wzrayyy-university/cpp-way-home)
 ## DSA
-[Assignments](https://github.com/wzrayyy-university/dsa-assignments), [Sort Me CLI](https://github.com/wzrayyy-university/dsa-cli)
+[Sort Me CLI](https://github.com/wzrayyy-university/dsa-cli), [Assignments](https://github.com/wzrayyy-university/dsa-assignments)
 * [1 semester](https://github.com/wzrayyy-university/dsa-1)
 * [2 semester](https://github.com/wzrayyy-university/dsa-2)

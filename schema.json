@@ -127,9 +127,13 @@
               }
             }
           },
-          "required": [
-            "name",
-            "projects"
+          "anyOf": [
+            {
+              "required": ["name", "projects"]
+            },
+            {
+              "required": ["name", "links"]
+            }
           ]
         }
       }
@@ -153,6 +157,9 @@
         "name": {
           "type": "string",
           "title": "Title of the README.md file"
+        },
+        "repo": {
+          "type": "string"
         },
         "note": {
           "type": "string",
