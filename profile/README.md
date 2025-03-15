@@ -15,6 +15,6 @@
 ### Semester 2
 6. [Way Home](https://github.com/wzrayyy-university/cpp-way-home)
 ## DSA
-[Sort Me CLI](https://github.com/wzrayyy-university/dsa-cli), [Assignments](https://github.com/wzrayyy-university/dsa-assignments)
+[Notion](https://sortmesucks.notion.site/2-022d157a62ed448daad9587695484f99), [Sort Me CLI](https://github.com/wzrayyy-university/dsa-cli), [Assignments](https://github.com/wzrayyy-university/dsa-assignments)
 * [1 semester](https://github.com/wzrayyy-university/dsa-1)
 * [2 semester](https://github.com/wzrayyy-university/dsa-2)

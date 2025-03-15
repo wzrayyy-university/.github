@@ -62,6 +62,11 @@ def make_request(repo: str, private: bool) -> tuple[int, str]:
 def process_entry[T](entry: T, private: Callable[[T], bool], get_info: Callable[[T], tuple[str, str]], alignment: int) -> bool:
     is_private = private(entry)
     name, repo = get_info(entry)
+
+    # idc, this will come to bite me later
+    if data['meta']['repo'] not in repo:
+        return False
+
     alignment -= len(name)
 
     print(name + ':' + ' ' * alignment, end='')

@@ -12,4 +12,4 @@ def get_link_info(link, repo_prefix: str) -> tuple[str, str]:
         if 'repo' in link:
             return link['name'], repo_prefix + link['repo']
         else:
-            return link['name'], repo_prefix + link['url']
+            return link['name'], link['url']

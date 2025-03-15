@@ -33,6 +33,8 @@ assignments:
     name: DSA
     numbered: false
     links:
+      - name: Notion
+        url: https://sortmesucks.notion.site/2-022d157a62ed448daad9587695484f99
       - name: Sort Me CLI
         repo: cli
       - name: Assignments
