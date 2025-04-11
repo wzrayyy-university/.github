@@ -43,18 +43,29 @@ for entry_name in data['assignments']:
         show_semesters = len(projects) > 1 and sum([len(projects[i]) for i in projects]) > len(projects)
 
     idx = 1
+    if not show_semesters:
+        output += (f'<ol>' if numbered else '<ul>') + '\n'
     for project_semester in projects:
-        output += f'### Semester {project_semester}\n' if show_semesters else ''
+        output += f'### Semester {project_semester}</h3>\n' if show_semesters else ''
+        if show_semesters:
+            output += (f'<ol>' if numbered else '<ul>') + '\n'
         for project in projects[project_semester]:
             name, repo, project_idx = get_project_info(project, repo_prefix)
 
             idx = idx if project_idx == -1 else project_idx
 
-            if numbered:
-                output += f'{idx}. [{name}]({repo})\n'
-                idx += 1
-            else:
-                output += f'* [{name}]({repo})\n'
+            output += f'<li value="{idx}"><a href="{repo}">{name}</a></li>\n'
+            idx += 1
+            # if numbered:
+            #     output += f'{idx}. [{name}]({repo})\n'
+            #     idx += 1
+            # else:
+            #     output += f'* [{name}]({repo})\n'
+        if show_semesters:
+            output += ('</ol>' if numbered else '</ul>') + '\n\n'
+
+    if not show_semesters:
+        output += ('</ol>' if numbered else '</ul>') + '\n\n'
 
 with open("profile/README.md", 'w') as f:
     f.write(output.strip() + '\n')
