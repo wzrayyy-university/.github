@@ -28,6 +28,9 @@ assignments:
         - Labwork 5
       2:
         - Way Home
+        - name: Task Scheduler
+          repo: task-scheduler
+          idx: 9
 
   dsa:
     name: DSA

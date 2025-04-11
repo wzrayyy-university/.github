@@ -1,0 +1,4 @@
+#!/bin/sh
+TOP_LEVEL="$(git rev-parse --show-toplevel)"
+/usr/bin/python3 "$TOP_LEVEL/generate.py"
+git add "$TOP_LEVEL/profile/README.md"
