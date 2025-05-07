@@ -6,6 +6,7 @@
 <ol>
 <li value="1"><a href="https://github.com/wzrayyy-university/ca-fixed-point">Fixed Point</a></li>
 <li value="2"><a href="https://github.com/wzrayyy-university/ca-floating-point">Floating Point</a></li>
+<li value="3"><a href="https://github.com/wzrayyy-university/ca-circuit">Logisim/Verilog</a></li>
 </ol>
 
 ## C++

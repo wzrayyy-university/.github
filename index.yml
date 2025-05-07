@@ -16,6 +16,8 @@ assignments:
       2:
         - Fixed Point
         - Floating Point
+        - name: Logisim/Verilog
+          repo: circuit
 
   cpp:
     name: C++

@@ -56,11 +56,6 @@ for entry_name in data['assignments']:
 
             output += f'<li value="{idx}"><a href="{repo}">{name}</a></li>\n'
             idx += 1
-            # if numbered:
-            #     output += f'{idx}. [{name}]({repo})\n'
-            #     idx += 1
-            # else:
-            #     output += f'* [{name}]({repo})\n'
         if show_semesters:
             output += ('</ol>' if numbered else '</ul>') + '\n\n'
 
