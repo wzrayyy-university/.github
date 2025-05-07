@@ -34,3 +34,6 @@
 <li value="1"><a href="https://github.com/wzrayyy-university/dsa-1">1 semester</a></li>
 <li value="2"><a href="https://github.com/wzrayyy-university/dsa-2">2 semester</a></li>
 </ul>
+
+## Discrete Math
+[Homework assignments](https://github.com/wzrayyy-university/discrete_math-homework-assignments)

@@ -37,6 +37,9 @@ for entry_name in data['assignments']:
             links_printable.append(f"[{name}]({url})")
         output += ', '.join(links_printable) + '\n'
 
+    if not len(projects):
+        continue
+
     if 'show_semesters' in entry:
         show_semesters = entry['show_semesters']
     else:

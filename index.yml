@@ -53,6 +53,10 @@ assignments:
       2:
         - name: 2 semester
           repo: '2'
+  discrete_math:
+    name: Discrete Math
+    links:
+      - Homework assignments
 
 availability:
   1: 04/01/2024
