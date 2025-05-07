@@ -22,7 +22,10 @@
 ### Semester 2</h3>
 <ol>
 <li value="6"><a href="https://github.com/wzrayyy-university/cpp-way-home">Way Home</a></li>
+<li value="7"><a href="https://github.com/wzrayyy-university/cpp-unrolled-linked-list">Unrolled Linked List</a></li>
+<li value="8"><a href="https://github.com/wzrayyy-university/cpp-stl-adapters">STL Adapters</a></li>
 <li value="9"><a href="https://github.com/wzrayyy-university/cpp-task-scheduler">Task Scheduler</a></li>
+<li value="10"><a href="https://github.com/wzrayyy-university/cpp-itmoscript">ITMOScript</a></li>
 </ol>
 
 ## DSA
