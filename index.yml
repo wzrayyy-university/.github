@@ -53,7 +53,7 @@ assignments:
       2:
         - name: 2 semester
           repo: '2'
-  discrete_math:
+  dm:
     name: Discrete Math
     links:
       - Homework assignments

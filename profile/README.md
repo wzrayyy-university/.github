@@ -36,4 +36,4 @@
 </ul>
 
 ## Discrete Math
-[Homework assignments](https://github.com/wzrayyy-university/discrete_math-homework-assignments)
+[Homework assignments](https://github.com/wzrayyy-university/dm-homework-assignments)
